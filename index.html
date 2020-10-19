@@ -1,11 +1,13 @@
-<!DOCTYPE html>
+
+    <!DOCTYPE html>
 <html lang="ru" dir="ltr">
   <head>
     <meta charset="utf-8">
+      <link rel="icon" type="image/png" href="viface.png" />
     <title>Добро пожаловать | Viface</title>
   </head>
   <body>
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="main.css">
       <div class="col">
         <?php
        if($_COOKIE['user'] == ''):
@@ -23,10 +25,10 @@
             <div class="container mt-4">
       <form action="check.php" method="post">
         <center><h3 style="color:grey">Впервые в viface?</h3></center>
-        <center><h4 style="color:grey">Моментальная регистрация</h4></center>
-        <center><input type="text" class="form-control" name="login" id="login" placeholder="логин"></center>
-      <center><input type="text" class="form-control" name="name" id="name" placeholder="имя"></center>
-        <center><input type="text" class="form-control" name="pass" id="pass" placeholder="порль"></center>
+        <center><h4 style="color:grey">Маментальная регистрация</h4></center>
+        <center><input type="text" class="form-control" name="login" id="login" placeholder="Имя"></center>
+      <center><input type="text" class="form-control" name="name" id="name" placeholder="Фамилия"></center>
+        <center><input type="text" class="form-control" name="pass" id="pass" placeholder="пароль"></center>
         <center><button class="btn btn-success" type="sumbit">регистрацыя</button></center>
       </form>
       </div>
@@ -49,5 +51,8 @@ code above
 
 
   -->
+  </body>
+</html>
+
   </body>
 </html>
