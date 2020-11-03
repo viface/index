@@ -1,143 +1,30 @@
-
-    <!DOCTYPE html>
-<html lang="ru" dir="ltr">
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-      <link rel="icon" type="viface.ico" />
-    <title>Добро пожаловать | Viface</title>
-  </head>
-  <body>
-
-      <div class="col">
-        <?php
-       if($_COOKIE['user'] == ''):
-         ?>
-
-<center><h2>Viface</h2></center>
-        <form action="auth.php" method="post">
-   <center><input type="text" class="form-control" name="login" id="login" placeholder="login"></center>
-
-        <center><input type="password" class="form-control" name="pass" id="pass" placeholder="password"></center>
-
-        <center><button class="btn btn-success" type="submit">Вход</button></center>
-        </form>
-      </div>
-            <div class="container mt-4">
-      <form action="check.php" method="post">
-        <center><h3 style="color:grey">Впервые в viface?</h3></center>
-        <center><h4 style="color:grey">Маментальная регистрация</h4></center>
-        <center><input type="text" class="form-control" name="login" id="login" placeholder="Имя"></center>
-      <center><input type="text" class="form-control" name="name" id="name" placeholder="Фамилия"></center>
-        <center><input type="text" class="form-control" name="pass" id="pass" placeholder="пароль"></center>
-        <center><button class="btn btn-success" type="sumbit">регистрацыя</button></center>
-      </form>
-      </div>
-      <body style="background-image: url(jpg);
-      background-repeat: no-repeat; background-position:top center"></body>
-<?php endif;?>
-<p> hi <?=$_COOKIE['user']?>.<a
-  href=""></a>.</p>
+    <title>синий</title>
+<link rel="icon" href="https://www.google.com/url?sa=i&url=http%3A%2F%2Fwww.mobiledevice.ru%2F67044-bsod-sinii-ekran-smerti-microsoft-apple-windows.aspx&psig=AOvVaw2YAl833Njyh9MXRY30kX_i&ust=1604427900506000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCOiByeu95OwCFQAAAAAdAAAAABAM.jpg">
 
 
-      <hr>
-<center><h3 style="color:grey">Viface ©2020-2021</h3></center>
-    </hr>
-    <!--
-Лицензия Viface принадлежит
-Egor Myachin с 2020-2021г  а также css,php code
-код выше.
-the License belongs to Egor Myachin from 2020 2021 and also css,php
-code above
 
 
-  -->
-  <style media="screen">
-    body {
-      font-family: Tahoma;
-      background: ;
-      margin: 0;
-      background-image: url();
-    }
-    .group {
-      padding-left: 10px;
-      text-transform: uppercase;
-    }
-    label {
-      padding-left: 10px;
-      text-transform: uppercase;
-    }
-    input {
-      margin-top:  14px;
-      height: 40px;
-      width: 350px;
-      padding-left: 15px;
-      border-radius: 19px/20px;
-      border: none;
-      font-size: 18px;
-      box-shadow: 2px 2px 5px rgba(0,0,0,0.82);
-    }
-    input:focus {
-      border: 2px solid #6coff;
-      transform: translateX(5px);
-      width: 385;
-    }
-    button {
-      cursor: pointer;;
-      padding: 10px 30px;
-      height: 50px;
 
-      color: #fff;
-      background: black;
-      padding-left: 25px;
-      border-radius: 20px/20px;
-      border: none;
-      text-transform: uppercase;
-      font-size: 15px;
-      box-shadow: 2px 2px 5px rgba(0,0,0,0,82);
-    }
-    .name::before{
-      content: "";
-      color: black;
-    }
-    img {
-      margin-top: 18px;
-      height: 20px;
-      width: 20px;
-      border-radius: 19/20px;
-      padding-left: 15px;
+<style>
+body {
+  font-family: Tahoma;
+  background: ;
+  margin: 0;
+  background-image: url(https://www.google.com/imgres?imgurl=http%3A%2F%2Fwww.mobiledevice.ru%2FImages%2F67%2FNews_67044_1.jpg&imgrefurl=http%3A%2F%2Fwww.mobiledevice.ru%2F67044-bsod-sinii-ekran-smerti-microsoft-apple-windows.aspx&tbnid=E9IIl607KPafiM&vet=12ahUKEwjT07aQweTsAhXsAXcKHVaRDGwQMygAegUIARCzAQ..i&docid=lCRyVoMBINREpM&w=530&h=398&q=%D1%81%D0%B8%D0%BD%D0%B8%D0%B9%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%20%D1%81%D0%BC%D0%B5%D1%80%D1%82%D0%B8&ved=2ahUKEwjT07aQweTsAhXsAXcKHVaRDGwQMygAegUIARCzAQ.jpg);
+}
+button {
+  border-radius: 19px/20px;
+  border: none;
+  margin-top: 150px;
+  width: 300px;
+  height: 200px;
+}
+</style>
 
-    }
-    .group {
-      padding-left: 10px;
-      text-transform: uppercase;
-    }
-    label {
-      padding-left: 10px;
-      text-transform: uppercase;
-    }
-    textarea {
-      margin-top:  695px;
-      height: 40px;
-      width: 350px;
-      padding-left: 15px;
-      border-radius: 19px/20px;
-      border: none;
-      font-size: 18px;
-      box-shadow: 2px 2px 5px rgba(0,0,0,0.82);
-    }
-    textarea:focus {
-      border: 2px solid #6coff;
-      transform: translateX(5px);
-      width: 385;
-    }
-    a {
-      width: 3px;
-      height: 2px;
-        text-decoration: none;
-      }
-
-    }
-
-  </style>
-    </body>
-</html>
+<center><a href="https://www.googleadservices.com/pagead/aclk?sa=L&ai=DChcSEwjlkaK8veTsAhWLtbIKHSfhC94YABADGgJscg&ae=2&ohost=www.google.com&cid=CAASEuRoV86ETbL24P6XcOd5HzebCA&sig=AOD64_13iiS57M_QLnMKZubeCwgGvN0o-w&q&adurl&ved=2ahUKEwjR65i8veTsAhUxpIsKHSWBCN0Q0Qx6BAgZEAE"><button>ВЫЙТИ</button></center>
+</head>
+<body>
