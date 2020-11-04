@@ -28,21 +28,31 @@ button {
   height: 200px;
 text-align: big;
 }
-alert {
-  width: 300px;
-  height:200px;
+input {
+margin-top:  230px;
+margin-right: 991px;
+height: 40px;
+width: 297px;
+  color: #fff;
+background: black;
+padding-left: 15px;
+border-radius: 19px/20px;
+border: none;
+font-size: 18px;
+box-shadow: 2px 2px 5px rgba(0,0,0,0.82);
 }
-@media (max-width: 930px) { /* это будет показано при разрешении монитора до 930 пикселей */
-  .content-wrapper {padding: 0;} /* основное содержимое занимает всё пространство окна */
+.login h1 {
+  margin-right: 12px;
+}
+.wanted input {
+margin-left: -2000px;
+}
+a {
+  margin-left:  -2000px;
+  text-decoration: none;
 }
 
-@media (max-width: 930px) and (min-width: 470px) {  /* для разрешения экрана от 470 до 930 пикселей */
-  aside {position: static; width: 100%; background: #ccc;} /* боковая колонка смещается согласно расположению в HTML и меняет фон */
-}
 
-@media (max-width: 469px) { /* если максимальное разрешение экрана составит 469 пикселей */
-  body {font: .9em/1em "Helvetica Neue",Arial,Helvetica,sans-serif;} /* меняется шрифт */
-  aside {display: none;} /* боковая колонка исчезает */
 }
 </style>
 <link rel='stylesheet' media='(min-width: 1600px)' href='URL_большой.css' />
@@ -56,6 +66,17 @@ alert {
 
 <div class="head">
 <a href="https://vk.com/away.php?to=QxscGkd5Dlx1YA5TRSRWC0NUDhUUJVAVTwBmFR4ObR8nH0IPC3NcWkZwQwE0AF8xBRcTegkcc0EDIgNcIhMzRF5YN1FCNWEMBlh9fEd3ERA1HX5RLBECRhcEcBUEM19JMwp6GVAGH2oTPnwiHVREfjVuehAWHgpSOXE3VwwKUSU/M2pcAjE6AWU5EVoZK0QpPmJ8VxwpUFwGCw4xAw8hUWRcRiYkAHl2NCM4PkhGFGUZGQEgFV1teTl1QzY3FFoUHAUuS0FCVT4cc0Z9KFdkRkg0HVcCKHg2JnR5f0kNfQgyLkogGBQuSXweXREjBVV3DDEYKHkpMwMDFGU2BWZpWj4WSVF2DHwmHjUwC2cBWlwZM0UUDBICEFwPbnkbJVJ2SmMdBTUKdxAVKnoEUC0rRWhUdkEDDGVvNFQ4BXkcPGM1BUM7I3h/B1onXQwWLnYZPDdJY14LcAs7A2dsOQhgWxoBK2E0Imt3R3lBe0QTQicuDkgFOSkAdX8XdlkXJV5pMSs0SG0qdXkee2Z1BgYaGUUTY1E5NABXAXNJaRYMDEsicHxxACloSUgfDgc0F19sOFlFYBMRdzIzb1w0Gy4cC2cMbEAJNl11SDUaBm0DGQMleEFyS0VJTCQsDRQZDn8oEDEeaXQaWUsWdn1xHRFkHQUnDUEYfANzQm11WUUMSRMCAn0uAyYrC0FHfUAYEVdzLy5pKHgoMUBHF1B3IEN6RjVxDzQXEVwXUBEwcGEYdTU8KH1tMiQXRBxaAEESfEkmJwBPbEdreCskAEAFCwMsZGc3DyYad1RILi5oN3MpIF9CZ3s7H05cRjoWcR9qAnAsUS4haUUmSSIYDFVOTQwlFBtaNgEuClAWPXFrQT0xSBc6aVVSJi43RQwIXzEdAnlzPRggJU1aalwDOHktFh14D0hxDQgIIV0wAisoUFUcahsfAgAWGTIfH044Yh4-"><img src="" alt=""></a>
+
 </div>
-</head>
+
+
+<form class="" action="http://localhost:8888/auth.php" method="post">
+<input type="text"  name="login" placeholder="Сообщение">
+</form>
+<a href="" style="color:green">Отзывы</a>
+<script type="text/php">
+<?php
+
+print_r('login')
+
 <body>
