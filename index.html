@@ -5,8 +5,15 @@
    <link rel="icon" type="image/png" href="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQhz9DMniODoBRDImhFuwkzHoZLmCWFCIamhQ&usqp=CAU" />
     <title>Моя страница</title>
   </head>
+  <meta name="viewport" content="width=device-width">
+  <meta name="viewport" content="width=device-width">
+  <meta name="viewport" content="width=600">
+  <meta name="viewport" content="height=device-height">
+  <meta name="viewport" content="user-scalable=yes">
+  <meta name="viewport" content="user-scalable=no">
+  <meta name="viewport" content="height=device-height,width=600,user-scalable=yes">
+  <meta name="viewport" content="width=device-width, user-scalable=yes">
   <body>
-
 <div class="main">
 <form>
 
@@ -15,6 +22,19 @@
 </div>
 <h3 style="color:white">Viface</h3>
 <style media="screen">
+
+@media screen and (max-width: 600px) {
+    body {
+        font-size:1.5em;
+    }
+    …
+    h2 {
+        font-size:2.5em;
+    }
+}
+@media screen and (max-width: 600px) {
+    …
+}
 body {
   font-family: Tahoma;
   background: lightgrey;
@@ -49,6 +69,16 @@ input {
   border: none;
   font-size: 18px;
   box-shadow: 2px 2px 5px rgba(0,0,0,0.82);
+  outline: none;
+  border: none;
+  border: solid 1px #f2f2f2;
+  .custom-file-upload {
+      border: 1px solid #ccc;
+      display: inline-block;
+      padding: 6px 12px;
+      cursor: pointer;
+  }
+  }
 }
 input:focus {
   border: 2px solid #6coff;
@@ -180,10 +210,11 @@ margin-left: 1000px;
 
 }
 .cal hr {
-
+  color: #fff;
+  background: white;
 }
 .col hr {
-  margin-top: -100px;
+  margin-top: -50px;
 }
 .cal {
 
@@ -202,9 +233,9 @@ margin-left: 1000px;
 
 }
 .cal h5 {
-margin-top: 20px;
+margin-top: 1px;
 
-  margin-left: 200px;
+  margin-left: 69px;
 }
 h3 {
   margin-top: -34px;
@@ -230,6 +261,7 @@ h3 {
 .margin hr {
   width: 10px;
   height: 10px;
+
 }
 .col img {
   margin-left: -10px;
@@ -274,20 +306,92 @@ padding-top: 1px;
 .cal input {
   margin-top: 10px;
 }
+iframe {
+  margin-top: 10px;
+margin-left: 400px;
+  width: 200px;
+
+  border-radius: 20px/20px;
+
+}
 </style>
 <div class="bok">
 </div>
 <div class="cal">
 <form>
-<a class="page_counter" href="/albums595770145?profile=1" onclick="return showAlbums(595770145, {noHistory: true}, event);">
+<a class="page_counter" href="/albums595770145?profile=1" onclick="return showAlbums(595770145 {noHistory: true}, event);">
+<iframe src="" width="" height="" type="files"></iframe>
 <center><h4 style=""></h4></center>
+
 <h5 style="color:white">Страна:Россия</h5>
 <h5 style="color:white">Город:Тверь</h5>
 <h5 style="color:white">Место работы:</h5>
-<button type="redact" name="button">Редактировать страницу</button>
-<div class="label" href="https://vk.com/friends" style="color:white">фотография</div>
-<hr></hr>
+<a href="https://viface.github.io/htmls/"><button type="redact" name="button">Редактировать страницу</button></a>
 </a>
+</div>
+<script>
+function updateSize() {
+  var nBytes = 0,
+      oFiles = document.getElementById("uploadInput").files,
+      nFiles = oFiles.length;
+  for (var nFileId = 0; nFileId < nFiles; nFileId++) {
+    nBytes += oFiles[nFileId].size;
+  }
+  var sOutput = nBytes + " bytes";
+  // optional code for multiples approximation
+  for (var aMultiples = ["KiB", "MiB", "GiB", "TiB", "PiB", "EiB", "ZiB", "YiB"], nMultiple = 0, nApprox = nBytes / 1024; nApprox > 1; nApprox /= 1024, nMultiple++) {
+    sOutput = nApprox.toFixed(3) + " " + aMultiples[nMultiple] + " (" + nBytes + " bytes)";
+  }
+  // end of optional code
+  document.getElementById("fileNum").innerHTML = nFiles;
+  document.getElementById("fileSize").innerHTML = sOutput;
+}
+var fileSelect = document.getElementById("fileSelect"),
+  fileElem = document.getElementById("fileElem");
+
+fileSelect.addEventListener("click", function (e) {
+  if (fileElem) {
+    fileElem.click();
+  }
+  e.preventDefault(); // предотвращает перемещение к "#"
+}, false);
+ar dropbox;
+
+dropbox = document.getElementById("dropbox");
+dropbox.addEventListener("dragenter", dragenter, false);
+dropbox.addEventListener("dragover", dragover, false);
+dropbox.addEventListener("drop", drop, false);
+function dragenter(e) {
+  e.stopPropagation();
+  e.preventDefault();
+}
+
+function dragover(e) {
+  e.stopPropagation();
+  e.preventDefault();
+}
+function handleFiles(files) {
+  for (var i = 0; i < files.length; i++) {
+    var file = files[i];
+
+    if (!file.type.startsWith('image/')){ continue }
+
+    var img = document.createElement("img");
+    img.classList.add("obj");
+    img.file = file;
+    preview.appendChild(img); // Предполагается, что "preview" это div, в котором будет отображаться содержимое.
+
+    var reader = new FileReader();
+    reader.onload = (function(aImg) { return function(e) { aImg.src = e.target.result; }; })(img);
+    reader.readAsDataURL(file);
+    var video = document.getElementById('video');
+    var obj_url = window.URL.createObjectURL(blob);
+    video.src = obj_url;
+    video.play()
+    window.URL.revokeObjectURL(obj_url);
+  }
+}
+</script>
 </form>
 </div>
 <div class="vol">
